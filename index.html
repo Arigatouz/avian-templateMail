@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,400;0,700;1,500&display=swap"
+    rel="stylesheet">
+  <title>Timewebs Mail Template</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --blue-color: #051E4B;
+      --hero-backgroundColor: #B6E5D8;
+      --bg-color: #F7F8FA;
+      --black-color: #000;
+      --white-color: #FFF;
+      --border-color: #DEE2E9;
+      --grayish-color: #4F4F51;
+      --green-color: #00773E;
+      --red-color: #EC445A;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      margin-top: 10px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+      width: 680px;
+      height: 1210px;
+      border: 1px solid lightblue;
+      background-color: var(--bg-color);
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .header {
+      height: 428px;
+      background-color: var(--hero-backgroundColor);
+    }
+
+    .header__promotion {
+      height: 48px;
+      width: 80%;
+      margin: 0 auto;
+      border-bottom: 1px dashed var(--blue-color);
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .header__promotion__title {
+      color: var(--blue-color);
+      font-size: 12px;
+      font-weight: 400;
+      padding-top: 16px;
+    }
+
+    .header__main {
+      width: 611px;
+      height: 320px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .header__main__hero {
+      color: var(--blue-color);
+      font-weight: 700;
+      margin-top: 2rem;
+    }
+
+    .header__main__hero h1 {
+      font-size: 35px;
+      line-height: 4rem;
+    }
+
+    .header__main__hero h1 strong {
+      font-size: 48px;
+
+    }
+
+    .header__main__hero p {
+      color: var(--black-color);
+      margin-top: 1rem;
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 2rem;
+    }
+
+    .header__main__image {
+      margin-top: 3rem;
+      width: 314px;
+      height: 314px;
+    }
+
+    .case-section {
+      width: 611px;
+      margin: 2rem auto;
+    }
+
+    .cases {
+      background-color: var(--white-color);
+      width: 611px;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 24px;
+    }
+
+    .cases__header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .cases img {
+      width: 39.33px;
+      height: 29.5px;
+    }
+
+
+    .cases__header__title {
+      color: var(--black-color);
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .cases__header__variants {
+      font-size: 14px;
+      font-weight: 400;
+      position: relative;
+    }
+
+    .cases__header__variants img {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 2px;
+    }
+
+    .cases__header__variants span:first-of-type {
+      color: var(--green-color);
+      margin-left: 1.5rem;
+    }
+
+    .cases__body {
+      margin-top: 16px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+    }
+
+    .cases__body__titles {
+      font-size: 14px;
+    }
+
+    .cases__body__titles p {
+      border-right: 1px solid var(--border-color);
+      padding-right: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .cases__body__statistics {
+      font-size: 14px;
+      margin-left: 1rem;
+    }
+
+    .cases__body__statisticsView {
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .statistics__collection {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .statistics__collection img {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.5rem;
+    }
+
+    .statistics__collection span {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--grayish-color);
+      font-family: 'Inter', sans-serif;
+      margin-right: 1.66rem;
+
+    }
+
+    .objects-section {
+      width: 611px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 24px;
+      grid-row-gap: 24px;
+      margin: 0 auto;
+    }
+
+    .events,
+    .entities,
+    .identities,
+    .files {
+      background-color: var(--white-color);
+      width: 293.5px;
+      height: 107.5px;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 24px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1rem;
+    }
+
+
+    .events {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .files {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .entities {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .identities {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .events img,
+    .entities img,
+    .identities img,
+    .files img {
+      width: 42.33px;
+      height: 34.96px;
+    }
+
+    .events__title,
+    .entities__title,
+    .identities__title,
+    .files__title {
+      font-weight: 500;
+      font-size: 20px;
+      color: var(--black-color);
+    }
+
+    .events__variants,
+    .entities__variants,
+    .identities__variants,
+    .files__variants {
+      font-size: 14px;
+      font-weight: 400;
+      position: relative;
+    }
+
+    .m-1rem {
+      margin-left: 1rem;
+    }
+
+    .events__variants span:first-of-type,
+    .entities__variants span:first-of-type {
+      color: var(--red-color);
+    }
+
+    .files__variants span:first-of-type {
+      color: var(--green-color);
+    }
+
+    .events__variants img,
+    .entities__variants img,
+    .identities__variants img,
+    .files__variants img {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 2px;
+    }
+
+    .footer {
+      width: 611px;
+      text-align: center;
+      margin: 5rem auto;
+    }
+
+    .footer img {
+      margin-bottom: 2rem;
+    }
+
+    .footer__support {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      color: var(--blue-color);
+      border-bottom: 1px solid var(--border-color);
+
+    }
+
+    .footer__support a:not(:last-child) {
+      border-right: 1px solid var(--border-color);
+      padding: 0 12px;
+    }
+
+    .footer__support a:last-of-type {
+      padding-left: 12px;
+    }
+
+    .footer__preferences {
+      font-weight: 400;
+      font-size: 14px;
+      color: var(--blue-color);
+    }
+
+    a {
+      all: unset;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header__promotion">
+        <p class="header__promotion__title">Promotion area (if needed)</p>
+      </div>
+      <div class="header__main">
+        <div class="header__main__hero">
+          <img src="./assets/icons/Logo.svg" alt="Timewebs logo">
+          <h1>Weekly <br /> <strong>Updates</strong></h1>
+          <p>March 4,2023 - March 11,2023</p>
+        </div>
+        <div class="header__main__image">
+          <img src="./assets/images/header-image.svg" alt="Hero image">
+        </div>
+      </div>
+    </header>
+    <section class="case-section">
+      <div class="cases">
+        <div class="cases__header">
+          <img src="./assets/icons/cases-icon.svg" alt="cases icon">
+          <div>
+            <p class="cases__header__title">2 Cases</p>
+            <div class="cases__header__variants">
+              <img src="./assets/icons/Arrow-up.svg" alt="up arrow">
+              <span>+1</span>
+              <span>last week</span>
+            </div>
+          </div>
+        </div>
+        <div class="cases__body">
+          <div class="cases__body__titles">
+            <a href="#" target="_blank">
+              <p>variable placeHolder</p>
+            </a>
+            <a href="#" target="_blank">
+              <p>variable</p>
+            </a>
+          </div>
+          <div class="cases__body__statistics">
+            <div class="cases__body__statisticsView">
+              <div class="statistics__collection">
+                <img src="./assets/icons/small-event-icon.svg" alt="event small icon">
+                <span>14</span>
+              </div>
+              <div class="statistics__collection">
+                <img src="./assets/icons/small-identity-icon.svg" alt="event small icon">
+                <span>14</span>
+              </div>
+              <div class="statistics__collection">
+                <img src="./assets/icons/small-entity-icon.svg" alt="event small icon">
+                <span>14</span>
+              </div>
+
+            </div>
+            <div class="cases__body__statisticsView">
+              <div class="statistics__collection">
+                <img src="./assets/icons/small-event-icon.svg" alt="event small icon">
+                <span>14</span>
+              </div>
+              <div class="statistics__collection">
+                <img src="./assets/icons/small-identity-icon.svg" alt="event small icon">
+                <span>14</span>
+              </div>
+              <div class="statistics__collection">
+                <img src="./assets/icons/small-entity-icon.svg" alt="event small icon">
+                <span>14</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="objects-section">
+      <div class="events">
+        <img src="./assets/icons/large-event-icon.svg" alt="cases icon">
+        <div class="">
+          <p class="events__title">43 Events</p>
+          <div class="events__variants">
+            <img src="./assets/icons/Arrow-down.svg" alt="up arrow">
+            <span class="m-1rem">-12</span>
+            <span>last week</span>
+          </div>
+        </div>
+      </div>
+      <div class="files">
+        <img src="./assets/icons/large-file-icon.svg" alt="cases icon">
+        <div class="">
+          <p class="files__title">174 Files</p>
+          <div class="files__variants">
+            <img src="./assets/icons/Arrow-up.svg" alt="up arrow">
+            <span class="m-1rem">+52</span>
+            <span>last week</span>
+          </div>
+        </div>
+      </div>
+      <div class="entities">
+        <img src="./assets/icons/large-entity-icon.svg" alt="cases icon">
+        <div class="">
+          <p class="entities__title">8 Entities</p>
+          <div class="entities__variants">
+            <img src="./assets/icons/Arrow-down.svg" alt="up arrow">
+            <span class="m-1rem">-1</span>
+            <span>last week</span>
+          </div>
+        </div>
+      </div>
+      <div class="identities">
+        <img src="./assets/icons/large-identity-icon.svg" alt="cases icon">
+        <div class="">
+          <p class="identities__title">23 Identities</p>
+          <div class="identities__variants ">
+            <!-- <img src="./assets/icons/Arrow-up.svg" alt="up arrow"> -->
+            <span>0</span>
+            <span>last week</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <img src="./assets/icons/mono-logo.svg" alt="mono timewebs logo">
+      <div class="footer__support">
+        <a href="#" target="_blank">
+          <p>Terms & conditions</p>
+        </a>
+        <a href="#" target="_blank">
+          <p>Privacy policy</p>
+        </a>
+        <a href="#" target="_blank">
+          <p>Contact us</p>
+        </a>
+      </div>
+      <div class="footer__preferences">
+        <a href="#" target="_blank">
+          <p>Want to change how you receive these emails ?</p>
+        </a>
+
+        <p>You can
+          <a href="#" target="_blank"><strong>update your preferences</strong></a>
+          or
+          <a href="#" target="_blank"><strong>unsubscribe from this list.</strong></a>
+        </p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>
